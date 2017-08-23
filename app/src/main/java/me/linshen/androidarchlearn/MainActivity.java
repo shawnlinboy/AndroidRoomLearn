@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public void run() {
                         UserEntity userEntity = new UserEntity(mEtName.getText().toString(),
                                 mEtAge.getText().toString());
-                        mAppdataBase.getUserEntityDao().addUser(userEntity);
+                        AppDatabase.getDatabase(getApplicationContext()).getUserEntityDao().addUser(userEntity);
                     }
                 });
                 break;
